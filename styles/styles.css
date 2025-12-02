@@ -1,0 +1,100 @@
+*{ box-sizing: border-box; }
+
+body { background-color: #f5f9fb;
+       font-family: Arial, Helvetica, sans-serif;
+	   margin: 0;
+	   padding:0;
+}
+/* Center the page content */
+#wrapper {  width: 80%;
+	margin: 0 ;
+	background-color: #C9F6EC; /*background color soft mint*/
+	border: 1px solid #cfd8dc;
+    padding: 1em 2em 2em 2em;
+	
+}
+/* Header styles */
+header {
+	background-color: #BFE4E3; 
+	background-image: url(../images/softshore_logo.png);
+	background-repeat: no-repeat;
+	height: 150px;
+	padding-left: 130px;
+	padding-bottom: 5px;
+	padding-top: 2px;
+    text-align: center;
+    border-bottom: 3px solid #87ceeb;  /* sky blue line */
+}
+h1 { 
+	 font-size: 3.5em;
+}
+/* Navigation styles */
+nav { padding-top: 10px;
+      float: left;
+      width: 200px; 
+	  text-align: center;
+	  background-color: #C9F6EC;  /* soft mint */
+
+}
+nav ul { list-style-type: none; 
+       padding-left: 20px;
+	   text-decoration: none;
+	   color: #ffffff;
+   
+	 }
+	 
+/* Space between each nav item */	 	 
+nav li { padding-bottom: 5px;
+       font-weight: bold;
+}
+/*pseudo-class*/
+nav a:focus {
+    background-color: #ffe0e0;
+    color: #FF0000;
+    padding: 3px 5px;
+    border-radius: 5px;
+}
+
+nav a:active {
+    background-color: #ffcccc;
+    color: #FF0000;
+}
+
+}
+nav a { text-decoration: none; }
+nav a:link { color: #330000; }
+nav a:visited{ color: #90745D; }
+nav a:hover {
+    color: #00008B;             /* pop of Navy color on hover */
+    text-decoration: underline; /* underline appears on hover */
+}
+main { background-color: #F4EFE2; /* soft sand beige */
+		  margin: 0;
+          padding: 1px 20px 20px 20px;   
+		  overflow: auto; 
+		  display: block;
+}
+/* Images in main content */
+main img { 
+    float: right;
+    padding: 20px;
+}
+.clear{
+	clear: both;
+}
+.contact {
+    float: right;
+    width: 450px;
+    height: auto;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+
+footer { background-color: #C9F6EC;  /* soft mint */
+       padding: 20px;
+       text-align: center;
+	   font-size: small;
+	   font-style: italic;
+}
+	  

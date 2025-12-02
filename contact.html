@@ -1,0 +1,113 @@
+<!--Phase 3 Project - Jessica Tellez-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Contact - Soft Shore Suites</title>
+  <meta charset="utf-8">
+  <link href="styles/styles.css" rel="stylesheet">
+</head>
+<body>
+<div id="wrapper">
+  <header>
+      <h1>Soft Shore Suites</h1>
+  </header>
+
+  <nav>
+    <ul> 
+      <li><a href="index.html">Home</a></li>
+      <li><a href="rooms/ocean.html">Ocean View Suite</a></li>
+      <li><a href="rooms/garden.html">Garden View Suite</a></li>
+      <li><a href="events/weekend.html">Weekend Events</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h3>Contact Soft Shore Suites</h3>
+
+    <img src="images/softshore_exterior.jpg"
+         alt="Front entrance of Soft Shore Suites, modern hotel with ocean view"
+         class="contact">
+
+    <p>Please contact us if you have any questions or would like to ask about a stay.</p>
+
+    <h3>Contact information:</h3>
+    <div>
+      Soft Shore Suites<br>
+      777 Soft Shore Lane<br>
+      Amarillo, TX 79101<br>
+      Phone: 806-555-5555<br>
+      Email: <a href="mailto:jatellez@amarillocollege.com">jatellez@amarillocollege.com</a><br><br>
+    </div>
+    <p>We will be happy to help you plan your visit.</p>
+
+    <!-- NEW: modern booking bar -->
+    <section id="booking-bar">
+      <h3>Booking Request</h3>
+      <p>
+        Send your travel dates and suite choice. We will email you to confirm
+        if the room is available and share the total price.
+      </p>
+
+      <form action="mailto:jatellez@amarillocollege.com" method="post">
+        <div class="booking-row">
+          <div class="booking-field">
+            <label for="checkin">Check-in date</label>
+            <input type="date" id="checkin" name="checkin">
+          </div>
+
+          <div class="booking-field">
+            <label for="checkout">Check-out date</label>
+            <input type="date" id="checkout" name="checkout">
+          </div>
+
+          <div class="booking-field">
+            <label for="guests">Guests</label>
+            <input type="text" id="guests" name="guests"
+                   placeholder="2 adults · 0 children">
+          </div>
+
+          <div class="booking-field">
+            <label for="room">Suite</label>
+            <select id="room" name="room">
+              <option value="ocean">Ocean View Suite</option>
+              <option value="garden">Garden View Suite</option>
+              <option value="either">Either suite is fine</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="booking-row">
+          <div class="booking-notes">
+            <label for="notes">Notes / special request</label>
+            <textarea id="notes" name="notes" rows="3"
+              placeholder="Example: birthday trip, early check-in, extra pillows."></textarea>
+          </div>
+
+          <div class="booking-button">
+            <input type="submit" value="Check availability">
+          </div>
+        </div>
+      </form>
+
+      <p class="rate-note">
+        Red dates on our calendar show holidays and busy weekends.  
+      </p>
+
+      <!-- image of calendar with red dates (you will save this image in your images folder) -->
+      <img src="images/softshore_calendar_peak.jpg"
+           alt="Calendar with holidays and weekend dates marked in red"
+           class="calendar-preview">
+    </section>
+
+    <div class="clear"></div>
+  </main>
+
+  <footer>
+    Copyright &copy; 2025 Soft Shore Suites<br>
+    <a href="mailto:jatellez@amarillocollege.com">Jayka</a>
+  </footer>
+</div>
+</body>
+</html>
+
