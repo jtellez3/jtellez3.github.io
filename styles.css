@@ -1,0 +1,377 @@
+* {
+    box-sizing: border-box;
+}
+/************* Position the image (SLIDE SHOW) container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+body {
+    background-color: #f5f9fb;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the page content */
+#wrapper {
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #C9F6EC; /* soft mint */
+    border: 1px solid #cfd8dc;
+    padding: 1em 2em 2em 2em;
+}
+
+/* Header styles */
+header {
+    background-color: #BFE4E3;
+    background-image: url(../images/softshore_logo.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    height: 150px;
+    padding-left: 130px;
+    padding-bottom: 5px;
+    padding-top: 2px;
+    text-align: center;
+    border-bottom: 3px solid #87ceeb;  /* sky blue line */
+}
+
+h1 {
+    font-size: 3.5em;
+    margin: 0;
+}
+
+/* Navigation styles */
+nav {
+    padding-top: 10px;
+    float: left;
+    width: 200px;
+    text-align: center;
+    background-color: #C9F6EC;  /* soft mint */
+}
+
+nav ul {
+    list-style-type: none;
+    padding-left: 20px;
+    margin: 0;
+}
+
+nav li {
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+
+/* pseudo-classes for nav */
+nav a {
+    text-decoration: none;
+}
+
+nav a:link {
+    color: #330000;
+}
+
+nav a:visited {
+    color: #90745D;
+}
+
+nav a:hover {
+    color: #00008B;             /* pop of Navy color on hover */
+    text-decoration: underline; /* underline appears on hover */
+}
+
+nav a:focus {
+    background-color: #ffe0e0;
+    color: #FF0000;
+    padding: 3px 5px;
+    border-radius: 5px;
+}
+
+nav a:active {
+    background-color: #ffcccc;
+    color: #FF0000;
+}
+
+/* Main content */
+main {
+    background-color: #F4EFE2; /* soft sand beige */
+    margin: 0;
+    padding: 1px 20px 20px 20px;
+    overflow: auto;
+    display: block;
+}
+
+/* Images in main content */
+main img {
+    float: right;
+    padding: 20px;
+    max-width: 100%;
+    height: auto;
+}
+
+.clear {
+    clear: both;
+}
+
+.contact {
+    float: right;
+    width: 450px;
+    height: auto;
+    margin: 20px;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+/********* FORM STYLES *********/
+
+form {
+    max-width: 500px;
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    border: 1px solid #cfd8dc;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form input[type="number"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #cfd8dc;
+    font-size: 0.95em;
+}
+
+/* pseudo-classes for form fields */
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #87ceeb;
+    box-shadow: 0 0 4px #87ceeb;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+form input[type="submit"] {
+    background-color: #87ceeb;
+    color: #ffffff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #4682b4;
+}
+
+/********* FOOTER *********/
+
+footer {
+    background-color: #C9F6EC;  /* soft mint */
+    padding: 20px;
+    text-align: center;
+    font-size: small;
+    font-style: italic;
+}
+/*********Table styles********/
+table {
+    margin: auto;   /* centers table */
+    width: 90%;     /* responsive width */
+    border-spacing: 0;
+    border: 2px solid #8B6F47;  /* soft brown border */
+    background-color: #fff;
+}
+
+th {
+    background-color: #BFE4E3;  /* soft teal header */
+    padding: 12px;
+    font-size: 1.1em;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+/* pseudo-class for alternating rows */
+tr:nth-of-type(odd) {
+    background-color: #D2B48E; /* tan/beachy color */
+}
+
+
+/********* RESPONSIVE STYLES *********/
+
+@media (max-width: 768px) {
+    #wrapper {
+        width: 100%;
+        padding: 1em;
+        margin: 0;
+    }
+
+    header {
+        padding-left: 0;
+        background-position: center top;
+        background-size: 90px auto;
+        height: auto;
+        padding-top: 80px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    nav {
+        float: none;
+        width: 100%;
+        padding-bottom: 10px;
+    }
+
+    nav ul {
+        padding-left: 0;
+    }
+
+    nav li {
+        display: inline-block;
+        margin: 0 8px 5px 8px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    main img,
+    .contact {
+        float: none;
+        margin: 10px auto;
+        display: block;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    form {
+        margin: 15px auto;
+        width: 100%;
+    }
+}
+/* Extra small screen mobile styles */
+@media (max-width: 480px) {
+
+    nav ul {
+        flex-direction: column;  /* stack items */
+        padding-left: 0;
+        text-align: center;
+    }
+    nav li {
+        display: block;
+        margin: 8px 0;
+    }
+    h1 {
+        font-size: 1.8em; /* smaller title on small phones */
+    }
+    table {
+        width: 100%;
+        font-size: 0.9em; /* small but readable text */
+    }
+    header {
+        background-size: 70px auto; /* shrinked my logo */
+        padding-top: 100px;
+    }
+}
