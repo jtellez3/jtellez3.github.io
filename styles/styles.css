@@ -375,3 +375,16 @@ tr:nth-of-type(odd) {
         padding-top: 100px;
     }
 }
+/* Reservation estimate totals */
+#roomCost,
+#serviceTotal,
+#serviceTax,
+#totalBill {
+    font-weight: bold;
+}
+
+/* Checkbox spacing on reservation page */
+form input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}

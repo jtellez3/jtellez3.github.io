@@ -6,34 +6,31 @@
   <title>Reservation - Soft Shore Suites</title>
   <meta charset="utf-8">
 
-  <!-- Link to external css file in css folder -->
-  <link href="../styles/styles.css" rel="stylesheet">
+  <!-- Link to external css file in styles folder -->
+  <link href="styles/styles.css" rel="stylesheet">
 
   <meta name="description" content="reservation page for booking a stay at Soft Shore Suites">
   <meta name="author" content="Jessica Tellez">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Link to external JavaScript file in scripts folder -->
+  <!-- Link to reservation JavaScript file in scripts folder -->
   <script src="scripts/reservation.js" defer></script>
 </head>
 
 <body>
 <div id="wrapper">
-
-  <!-- Header section -->
   <header>
       <h1>Soft Shore Suites</h1>
   </header>
 
-  <!-- Navigation menu -->
   <nav>
     <ul> 
-    <li><a href="../index.html">Home</a></li>
-	<li><a href="ocean.html">Ocean View Suite</a></li>
-	<li><a href="garden.html">Garden View Suite</a></li>
-	<li><a href="../events/weekend.html">Weekend Events</a></li>
-	<li><a href="../reservation.html">Reservation</a></li>
-	<li><a href="../contact.html">Contact</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="rooms/ocean.html">Ocean View Suite</a></li>
+      <li><a href="rooms/garden.html">Garden View Suite</a></li>
+      <li><a href="events/weekend.html">Weekend Events</a></li>
+      <li><a href="reservation.html">Reservation</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
@@ -44,38 +41,31 @@
 
     <!-- Reservation form -->
     <form method="post" action="https://webdevbasics.net/scripts/demo.php">
-      
-      <!-- Guest name -->
       <div class="form-group">
         <label for="fullName">Full Name</label>
         <input type="text" id="fullName" name="fullName">
       </div>
 
-      <!-- Guest email -->
       <div class="form-group">
         <label for="email">Email Address</label>
         <input type="email" id="email" name="email">
       </div>
 
-      <!-- Check-in date -->
       <div class="form-group">
         <label for="checkin">Check-in Date</label>
         <input type="date" id="checkin" name="checkin">
       </div>
 
-      <!-- Check-out date -->
       <div class="form-group">
         <label for="checkout">Check-out Date</label>
         <input type="date" id="checkout" name="checkout">
       </div>
 
-      <!-- Number of guests -->
       <div class="form-group">
         <label for="guests">Number of Guests</label>
         <input type="number" id="guests" name="guests" min="1" max="6">
       </div>
 
-      <!-- Room selection used as base cost -->
       <div class="form-group">
         <label for="roomType">Select Your Suite</label>
         <select id="roomType" name="roomType">
@@ -88,19 +78,16 @@
       <!-- Extra guest services for estimate feature -->
       <h3>Extra Guest Services</h3>
 
-      <!-- Feature 1 -->
       <div class="form-group">
         <input type="checkbox" id="roomService" name="roomService">
         <label for="roomService">Room Service ($25.00)</label>
       </div>
 
-      <!-- Feature 2 -->
       <div class="form-group">
         <input type="checkbox" id="champagne" name="champagne">
         <label for="champagne">Champagne ($45.00)</label>
       </div>
 
-      <!-- Feature 3 -->
       <div class="form-group">
         <input type="checkbox" id="valetParking" name="valetParking">
         <label for="valetParking">Valet Parking ($20.00)</label>
@@ -113,20 +100,17 @@
       <p>Tax: <span id="serviceTax">$0.00</span></p>
       <p>Total: <span id="totalBill">$0.00</span></p>
 
-      <!-- Special requests -->
       <div class="form-group">
         <label for="notes">Special Requests</label>
         <textarea id="notes" name="notes" rows="4"></textarea>
       </div>
 
-      <!-- Submit button -->
       <input type="submit" value="Submit Reservation Request">
     </form>
 
     <div class="clear"></div>
   </main>
 
-  <!-- Footer section -->
   <footer>
     Copyright &copy; 2025 Soft Shore Suites<br>
     <a href="mailto:jatellez@amarillocollege.com">Jayka</a>

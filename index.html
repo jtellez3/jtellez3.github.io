@@ -1,171 +1,175 @@
-<!--Phase 5 Project -Jessica Tellez -->
+<!-- Phase 5 Project - Jessica Tellez -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!--Page Title-->
-<title>Soft Shore Suites </title>
+<!-- Page Title -->
+<title>Soft Shore Suites</title>
 <meta charset="utf-8">
-<!--Link to external css-->
+
+<!-- Link to external css file in styles folder -->
 <link href="styles/styles.css" rel="stylesheet">
+
 <meta name="description" content="welcome to Soft Shore Suites and view the slide show of our location">
 <meta name="author" content="Jessica Tellez">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 </head>
+
 <body>
 <div id="wrapper">
-<!--Header section-->
+
+  <!-- Header section -->
   <header>
       <h1>Soft Shore Suites</h1>
   </header>
-  <!--Navigation menu-->
+
+  <!-- Navigation menu with link to reservation page -->
   <nav>
-  <ul> 
-    <li><a href="index.html">Home</a></li>
-    <li><a href="rooms/ocean.html">Ocean View Suite</a></li>
-    <li><a href="rooms/garden.html">Garden View Suite</a></li>
-    <li><a href="events/weekend.html">Weekend Events</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-  </nav>
-  <!--Hero image section-->
-  
-  <!--Main content section-->
- <main>
- 
- <h2> Relax at Soft Shore Suites </h2>
- <p> Soft Shore Suites is a calm and cozy place by the water. 
-     Enjoy soft colors, fresh air, and peaceful mornings.</p>
-	 
- <p> At Soft Shore Suites, every room has a calm and gentle style. 
-     With soft colors, clean comfort, and a warm welcome, we create a relaxing 
-     and upscale stay for every guest. </p>
-	 
-<!--slide show-->
-<!-- Container for the image gallery -->
-<div class="container">
-
-  <!-- Full-width images with number text -->
-   <div class="mySlides">
-    <div class="numbertext">1 / 6</div>
-      <img src="images/softshore_exterior.jpg" style="width:100%">
-  </div>
-  <div class="mySlides">
-    <div class="numbertext">2 / 6</div>
-      <img src="images/lobby_softshore.jpg" style="width:100%">
-  </div>
-  <div class="mySlides">
-    <div class="numbertext">3 / 6</div>
-      <img src="images/garden_view_suite.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">4 / 6</div>
-      <img src="images/ocean_view_suite.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">5 / 6</div>
-      <img src="images/weekend_event_deck.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">6 / 6</div>
-      <img src="images/weekend_events.jpg" style="width:100%">
-  </div>
-
-
-  <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-  <!-- Image text -->
-  <div class="caption-container">
-    <p id="caption"></p>
-  </div>
-
-  <!-- Thumbnail images -->
-   <div class="column">
-      <img class="demo cursor" src="images/softshorethumb.jpg" style="width:100%" onclick="currentSlide(1)" alt="Welcome to Soft Shore Suites">
-    </div>
-	<div class="column">
-      <img class="demo cursor" src="images/lobbythumb.jpg" style="width:100%" onclick="currentSlide(2)" alt="Soft Shore Suites Lobby">
-    </div>
-  <div class="row">
-    <div class="column">
-      <img class="demo cursor" src="images/gardenthumb.jpg" style="width:100%" onclick="currentSlide(3)" alt="The Garden Suite">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="images/oceanthumb.jpg" style="width:100%" onclick="currentSlide(4)" alt="The Ocean View">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="images/weekendthumb.jpg" style="width:100%" onclick="currentSlide(5)" alt="Sunset Hour">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="images/eventthumb.jpg" style="width:100%" onclick="currentSlide(6)" alt="Patio View overlooking the ocean with the firplace lite">
-    </div>
-  </div>
-</div>	
-<script>
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("demo");
-  let captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}
-</script>	
- <h2>Soft Shore Suites features:</h2> 
-<!--List of features-->
-    <ul>
-        <li>Large picture windows with a view</li>
-        <li>Sliding glass door to a private deck</li>
-        <li>Sea shells and coastal décor</li>
-        <li>Comfortable beds and seating</li>
-		<li>24 Hour camera secuirty</li>
-        <li>Deluxe breakfast each morning</li>
-		<li>Garden style soaking tubs</li>
+    <ul> 
+      <li><a href="index.html">Home</a></li>
+      <li><a href="rooms/ocean.html">Ocean View Suite</a></li>
+      <li><a href="rooms/garden.html">Garden View Suite</a></li>
+      <li><a href="events/weekend.html">Weekend Events</a></li>
+      <li><a href="reservation.html">Reservation</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
-<p class="clear"></p>
-        <div>
-		<!--Address section-->
-            777 Soft Shore Lane<br>
-            Amarillo, TX 79101<br>
-            806-555-5555<br><br>
+  </nav>
+
+  <!-- Main content section -->
+  <main>
+    <h2>Relax at Soft Shore Suites</h2>
+    <p>Soft Shore Suites is a calm and cozy place by the water. 
+       Enjoy soft colors, fresh air, and peaceful mornings.</p>
+	 
+    <p>At Soft Shore Suites, every room has a calm and gentle style. 
+       With soft colors, clean comfort, and a warm welcome, we create a relaxing 
+       and upscale stay for every guest.</p>
+	 
+    <!-- Slideshow section -->
+    <div class="container">
+
+      <div class="mySlides">
+        <div class="numbertext">1 / 6</div>
+        <img src="images/softshore_exterior.jpg" style="width:100%" alt="Soft Shore Suites exterior">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 6</div>
+        <img src="images/lobby_softshore.jpg" style="width:100%" alt="Soft Shore Suites lobby">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 6</div>
+        <img src="images/garden_view_suite.jpg" style="width:100%" alt="Garden View Suite">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 6</div>
+        <img src="images/ocean_view_suite.jpg" style="width:100%" alt="Ocean View Suite">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">5 / 6</div>
+        <img src="images/weekend_event_deck.jpg" style="width:100%" alt="Weekend event deck">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+        <img src="images/weekend_events.jpg" style="width:100%" alt="Weekend events">
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+      <div class="column">
+        <img class="demo cursor" src="images/softshorethumb.jpg" style="width:100%" onclick="currentSlide(1)" alt="Welcome to Soft Shore Suites">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/lobbythumb.jpg" style="width:100%" onclick="currentSlide(2)" alt="Soft Shore Suites Lobby">
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="images/gardenthumb.jpg" style="width:100%" onclick="currentSlide(3)" alt="The Garden Suite">
         </div>
-</main>
-
-<!--Footer Section-->
-<footer>
-Copyright &copy; 2025 Soft Shore Suites<br>
-<a href="mailto:jatellez@amarillocollege.com">Jayka</a><br>
-<script>
-	document.write("This page was last modified on: " +
-	document.lastModified) 	<!--javascript-->
-</script>
-</footer>
-
+        <div class="column">
+          <img class="demo cursor" src="images/oceanthumb.jpg" style="width:100%" onclick="currentSlide(4)" alt="The Ocean View">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/weekendthumb.jpg" style="width:100%" onclick="currentSlide(5)" alt="Sunset Hour">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/eventthumb.jpg" style="width:100%" onclick="currentSlide(6)" alt="Patio View overlooking the ocean with the fireplace lit">
+        </div>
+      </div>
     </div>
+
+    <!-- JavaScript for image slideshow -->
+    <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("demo");
+      let captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+
+    <!-- Features list -->
+    <h2>Soft Shore Suites features:</h2>
+    <ul>
+      <li>Large picture windows with a view</li>
+      <li>Sliding glass door to a private deck</li>
+      <li>Sea shells and coastal décor</li>
+      <li>Comfortable beds and seating</li>
+      <li>24 Hour camera security</li>
+      <li>Deluxe breakfast each morning</li>
+      <li>Garden style soaking tubs</li>
+    </ul>
+
+    <p class="clear"></p>
+
+    <!-- Address section -->
+    <div>
+      777 Soft Shore Lane<br>
+      Amarillo, TX 79101<br>
+      806-555-5555<br><br>
+    </div>
+  </main>
+
+  <!-- Footer section -->
+  <footer>
+    Copyright &copy; 2025 Soft Shore Suites<br>
+    <a href="mailto:jatellez@amarillocollege.com">Jayka</a><br>
+    <script>
+      document.write("This page was last modified on: " + document.lastModified);
+    </script>
+  </footer>
+
+</div>
 </body>
 </html>
