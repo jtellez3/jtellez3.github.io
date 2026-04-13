@@ -418,6 +418,34 @@ form input[type="checkbox"] {
     margin-bottom: 8px;
     font-size: 0.95em;
 }
+/* Add-on item styling for reservation page */
+.addon-item {
+    background-color: #ffffff;
+    border: 1px solid #cfd8dc;
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+}
+
+/* Keep checkbox and title together */
+.addon-item input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.addon-item label {
+    display: inline;
+    font-weight: bold;
+}
+
+/* Description under each add-on */
+.addon-description {
+    margin-top: 8px;
+    margin-left: 26px;
+    font-size: 0.95em;
+    color: #555555;
+}
 
 /* 5-star rating style */
 .review-stars {
