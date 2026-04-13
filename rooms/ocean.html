@@ -2,131 +2,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Reservation page title -->
-  <title>Reservation - Soft Shore Suites</title>
+  <!-- Ocean View Suite page -->
+  <title>Ocean View Suite - Soft Shore Suites</title>
   <meta charset="utf-8">
 
-  <!-- Link to external css file in css folder -->
+  <!-- Link to css file from rooms folder -->
   <link href="../styles/styles.css" rel="stylesheet">
 
-  <meta name="description" content="reservation page for booking a stay at Soft Shore Suites">
+  <meta name="description" content="ocean view suite">
   <meta name="author" content="Jessica Tellez">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Link to external JavaScript file in scripts folder -->
-  <script src="scripts/reservation.js" defer></script>
 </head>
 
 <body>
 <div id="wrapper">
 
-  <!-- Header section -->
+  <!-- Header with site title -->
   <header>
       <h1>Soft Shore Suites</h1>
   </header>
-
+  
   <!-- Navigation menu -->
   <nav>
     <ul> 
-    <li><a href="../index.html">Home</a></li>
-	<li><a href="ocean.html">Ocean View Suite</a></li>
-	<li><a href="garden.html">Garden View Suite</a></li>
-	<li><a href="../events/weekend.html">Weekend Events</a></li>
-	<li><a href="../reservation.html">Reservation</a></li>
-	<li><a href="../contact.html">Contact</a></li>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="ocean.html">Ocean View Suite</a></li>
+      <li><a href="garden.html">Garden View Suite</a></li>
+      <li><a href="../events/weekend.html">Weekend Events</a></li>
+      <li><a href="../reservation.html">Reservation</a></li>
+	  <li><a href="../review.html">Reviews</a></li>
+      <li><a href="../contact.html">Contact</a></li>
     </ul>
   </nav>
 
   <main>
-    <!-- Reservation page heading -->
-    <h3>Reservation Page</h3>
-    <p>Please complete the form below to request your stay and view an estimate for extra guest services.</p>
+    <!-- Room image -->
+    <h3>Ocean View Suite</h3>
+    <img src="../images/ocean_view_suite.jpg" alt="Ocean View Suite with large window, deck, and ocean view" width="400">
 
-    <!-- Reservation form -->
-    <form method="post" action="https://webdevbasics.net/scripts/demo.php">
-      
-      <!-- Guest name -->
-      <div class="form-group">
-        <label for="fullName">Full Name</label>
-        <input type="text" id="fullName" name="fullName">
-      </div>
+    <p>The Ocean View Suite is perfect for guests who want to wake up to soft waves, 
+       sea green accents, and a clear view of the water. A large picture window and 
+       sliding glass door lead out to a private deck where you can sip your morning coffee.</p>
 
-      <!-- Guest email -->
-      <div class="form-group">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email">
-      </div>
+    <!-- Room details list -->
+    <h3>Room details:</h3>
+    <ul>
+      <li>King size bed with plush linens</li>
+      <li>Large picture window overlooking the water</li>
+      <li>Sliding glass door to a private deck</li>
+      <li>Coastal décor with seashells and crab artwork</li>
+      <li>Garden style soaking tub and walk-in shower</li>
+      <li>Smart TV and free high-speed Wi-Fi</li>
+      <li>Mini fridge, coffee station, and bottled water</li>
+    </ul>
 
-      <!-- Check-in date -->
-      <div class="form-group">
-        <label for="checkin">Check-in Date</label>
-        <input type="date" id="checkin" name="checkin">
-      </div>
+    <!-- Nightly rates -->
+    <h4>Nightly Rates</h4>
+    <ul>
+      <li>Weeknights (Sun-Thurs): $220 per night</li>
+      <li>Weekends (Fri-Sat): $260 per night</li>
+      <li>Holidays and event weekends: $290 per night</li>
+    </ul>
 
-      <!-- Check-out date -->
-      <div class="form-group">
-        <label for="checkout">Check-out Date</label>
-        <input type="date" id="checkout" name="checkout">
-      </div>
-
-      <!-- Number of guests -->
-      <div class="form-group">
-        <label for="guests">Number of Guests</label>
-        <input type="number" id="guests" name="guests" min="1" max="6">
-      </div>
-
-      <!-- Room selection used as base cost -->
-      <div class="form-group">
-        <label for="roomType">Select Your Suite</label>
-        <select id="roomType" name="roomType">
-          <option value="0">Choose a suite</option>
-          <option value="220">Ocean View Suite - $220.00</option>
-          <option value="180">Garden View Suite - $180.00</option>
-        </select>
-      </div>
-
-      <!-- Extra guest services for estimate feature -->
-      <h3>Extra Guest Services</h3>
-
-      <!-- Feature 1 -->
-      <div class="form-group">
-        <input type="checkbox" id="roomService" name="roomService">
-        <label for="roomService">Room Service ($25.00)</label>
-      </div>
-
-      <!-- Feature 2 -->
-      <div class="form-group">
-        <input type="checkbox" id="champagne" name="champagne">
-        <label for="champagne">Champagne ($45.00)</label>
-      </div>
-
-      <!-- Feature 3 -->
-      <div class="form-group">
-        <input type="checkbox" id="valetParking" name="valetParking">
-        <label for="valetParking">Valet Parking ($20.00)</label>
-      </div>
-
-      <!-- Estimate summary updated by JavaScript -->
-      <h3>Estimate Summary</h3>
-      <p>Room Cost: <span id="roomCost">$0.00</span></p>
-      <p>Extra Services: <span id="serviceTotal">$0.00</span></p>
-      <p>Tax: <span id="serviceTax">$0.00</span></p>
-      <p>Total: <span id="totalBill">$0.00</span></p>
-
-      <!-- Special requests -->
-      <div class="form-group">
-        <label for="notes">Special Requests</label>
-        <textarea id="notes" name="notes" rows="4"></textarea>
-      </div>
-
-      <!-- Submit button -->
-      <input type="submit" value="Submit Reservation Request">
-    </form>
-
-    <div class="clear"></div>
+    <p>This room is ideal for celebrating a birthday, anniversary, or special occasion for a nice quiet getaway, 
+       or anyone who wants a calm and upscale stay by the shore.</p>
   </main>
 
-  <!-- Footer section -->
+  <!-- Footer -->
   <footer>
     Copyright &copy; 2025 Soft Shore Suites<br>
     <a href="mailto:jatellez@amarillocollege.com">Jayka</a>
