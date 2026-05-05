@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
    const VALET_PARKING_PRICE = 20.00;
    const SPA_SERVICE_PRICE = 80.00;
    const MASSAGE_SERVICE_PRICE = 95.00;
+   const SPA_PACKAGE_PRICE = 120.00;
 
    /* Sales tax rate */
    const SALES_TAX = 0.07;
@@ -20,24 +21,31 @@ document.addEventListener("DOMContentLoaded", function () {
       let roomCost = parseFloat(document.getElementById("roomType").value) || 0;
       let serviceCost = 0;
 
+      /* Check which add-ons are selected */
       let roomService = document.getElementById("roomService").checked;
       let champagne = document.getElementById("champagne").checked;
       let valetParking = document.getElementById("valetParking").checked;
       let spaService = document.getElementById("spaService").checked;
       let massageService = document.getElementById("massageService").checked;
+      let spaPackage = document.getElementById("spaPackage").checked;
 
+      /* Add selected service prices */
       serviceCost += roomService ? ROOM_SERVICE_PRICE : 0;
       serviceCost += champagne ? CHAMPAGNE_PRICE : 0;
       serviceCost += valetParking ? VALET_PARKING_PRICE : 0;
       serviceCost += spaService ? SPA_SERVICE_PRICE : 0;
       serviceCost += massageService ? MASSAGE_SERVICE_PRICE : 0;
+      serviceCost += spaPackage ? SPA_PACKAGE_PRICE : 0;
 
+      /* Display room cost and extra service total */
       document.getElementById("roomCost").innerHTML = "$" + roomCost.toFixed(2);
       document.getElementById("serviceTotal").innerHTML = "$" + serviceCost.toFixed(2);
 
+      /* Calculate tax */
       let tax = (roomCost + serviceCost) * SALES_TAX;
       document.getElementById("serviceTax").innerHTML = "$" + tax.toFixed(2);
 
+      /* Calculate final total */
       let totalBill = roomCost + serviceCost + tax;
       document.getElementById("totalBill").innerHTML = "$" + totalBill.toFixed(2);
    }
@@ -51,4 +59,8 @@ document.addEventListener("DOMContentLoaded", function () {
    document.getElementById("valetParking").onclick = calcTotal;
    document.getElementById("spaService").onclick = calcTotal;
    document.getElementById("massageService").onclick = calcTotal;
+   document.getElementById("spaPackage").onclick = calcTotal;
+
+   /* Run calculator once when page loads */
+   calcTotal();
 });

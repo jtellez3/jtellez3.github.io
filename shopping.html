@@ -1,0 +1,87 @@
+<!-- Phase 6 Project - -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Shopping page title -->
+  <title>Shopping - Soft Shore Suites</title>
+  <meta charset="utf-8">
+
+  <!-- Link to external css file -->
+  <link href="styles/styles.css" rel="stylesheet">
+
+  <meta name="description" content="shopping page for Soft Shore Suites souvenirs and guest add-ons">
+  <meta name="author" content="Jessica Tellez">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Link to shopping JavaScript file -->
+  <script src="scripts/shopping.js" defer></script>
+</head>
+
+<body>
+<div id="wrapper">
+
+  <!-- Header section -->
+  <header>
+      <h1>Soft Shore Suites</h1>
+  </header>
+
+  <!-- Navigation menu -->
+  <nav>
+    <ul> 
+      <li><a href="index.html">Home</a></li>
+      <li><a href="rooms/ocean.html">Ocean View Suite</a></li>
+      <li><a href="rooms/garden.html">Garden View Suite</a></li>
+      <li><a href="events/weekend.html">Weekend Events</a></li>
+      <li><a href="reservation.html">Reservation</a></li>
+      <li><a href="review.html">Reviews</a></li>
+      <li><a href="shopping.html">Shopping</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main shopping content -->
+  <main>
+
+    <!-- Shopping heading -->
+    <h3>Soft Shore Shopping</h3>
+    <p>Shop guest favorites, beach souvenirs, and luxury add-ons from Soft Shore Suites.</p>
+
+    <!-- Pop up message when an item is added -->
+    <div id="cartPopup" class="cart-popup">
+      Your item has been added to your cart!
+    </div>
+
+    <!-- Products are added here by JavaScript -->
+    <section id="shopItems" class="shop-grid"></section>
+
+    <!-- Cart section -->
+    <section class="cart-box">
+      <h3>Your Shopping Cart</h3>
+      <p>Your cart will stay saved even if you leave this page.</p>
+
+      <!-- Cart items are added here by JavaScript -->
+      <div id="cartItems"></div>
+
+      <!-- Cart total -->
+      <p class="cart-total">Cart Total: <span id="cartTotal">$0.00</span></p>
+
+      <!-- Cart buttons -->
+      <button id="clearCart" class="shop-button">Clear Cart</button>
+      <button id="checkoutButton" class="checkout-button">Checkout</button>
+
+      <!-- Checkout message -->
+      <p id="checkoutMessage" class="checkout-message"></p>
+    </section>
+
+    <div class="clear"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    Copyright &copy; 2025 Soft Shore Suites<br>
+    <a href="mailto:jatellez@amarillocollege.com">Jayka</a>
+  </footer>
+
+</div>
+</body>
+</html>

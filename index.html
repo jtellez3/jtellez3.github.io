@@ -30,7 +30,8 @@
       <li><a href="rooms/garden.html">Garden View Suite</a></li>
       <li><a href="events/weekend.html">Weekend Events</a></li>
       <li><a href="reservation.html">Reservation</a></li>
-	  <li><a href="review.html">Reviews</a></li>
+	    <li><a href="review.html">Reviews</a></li>
+      <li><a href="shopping.html">Shopping</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
@@ -48,99 +49,205 @@
     <!-- Slideshow section -->
     <div class="container">
 
+      <!-- Slide 1 -->
       <div class="mySlides">
-        <div class="numbertext">1 / 6</div>
+        <div class="numbertext">1 / 10</div>
         <img src="images/softshore_exterior.jpg" style="width:100%" alt="Soft Shore Suites exterior">
       </div>
 
+      <!-- Slide 2 -->
       <div class="mySlides">
-        <div class="numbertext">2 / 6</div>
+        <div class="numbertext">2 / 10</div>
         <img src="images/lobby_softshore.jpg" style="width:100%" alt="Soft Shore Suites lobby">
       </div>
 
+      <!-- Slide 3 -->
       <div class="mySlides">
-        <div class="numbertext">3 / 6</div>
+        <div class="numbertext">3 / 10</div>
         <img src="images/garden_view_suite.jpg" style="width:100%" alt="Garden View Suite">
       </div>
 
+      <!-- Slide 4 -->
       <div class="mySlides">
-        <div class="numbertext">4 / 6</div>
+        <div class="numbertext">4 / 10</div>
         <img src="images/ocean_view_suite.jpg" style="width:100%" alt="Ocean View Suite">
       </div>
 
+      <!-- Slide 5 -->
       <div class="mySlides">
-        <div class="numbertext">5 / 6</div>
+        <div class="numbertext">5 / 10</div>
         <img src="images/weekend_event_deck.jpg" style="width:100%" alt="Weekend event deck">
       </div>
 
+      <!-- Slide 6 -->
       <div class="mySlides">
-        <div class="numbertext">6 / 6</div>
+        <div class="numbertext">6 / 10</div>
         <img src="images/weekend_events.jpg" style="width:100%" alt="Weekend events">
       </div>
 
+      <!-- New slide 7 -->
+      <div class="mySlides">
+        <div class="numbertext">7 / 10</div>
+        <img src="images/infinity_pool.jpg" style="width:100%" alt="Sunset Infinity Pool Escape">
+      </div>
+
+      <!-- New slide 8 -->
+      <div class="mySlides">
+        <div class="numbertext">8 / 10</div>
+        <img src="images/spa_services.jpg" style="width:100%" alt="Spa services">
+      </div>
+
+      <!-- New slide 9 -->
+      <div class="mySlides">
+        <div class="numbertext">9 / 10</div>
+        <img src="images/luxury_spa_dark.jpg" style="width:100%" alt="Luxury spa">
+      </div>
+
+      <!-- New slide 10 -->
+      <div class="mySlides">
+        <div class="numbertext">10 / 10</div>
+        <img src="images/couple_spa_dark.jpg" style="width:100%" alt="Relax and Unwind Spa Treatment">
+      </div>
+
+      <!-- Previous and next buttons -->
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
+      <!-- Caption text under slideshow -->
       <div class="caption-container">
         <p id="caption"></p>
       </div>
 
-      <div class="column">
-        <img class="demo cursor" src="images/softshorethumb.jpg" style="width:100%" onclick="currentSlide(1)" alt="Welcome to Soft Shore Suites">
-      </div>
-      <div class="column">
-        <img class="demo cursor" src="images/lobbythumb.jpg" style="width:100%" onclick="currentSlide(2)" alt="Soft Shore Suites Lobby">
-      </div>
-
+      <!-- Thumbnail images -->
       <div class="row">
+
+        <div class="column">
+          <img class="demo cursor" src="images/softshorethumb.jpg" style="width:100%" onclick="currentSlide(1)" alt="Welcome to Soft Shore Suites">
+        </div>
+
+        <div class="column">
+          <img class="demo cursor" src="images/lobbythumb.jpg" style="width:100%" onclick="currentSlide(2)" alt="Soft Shore Suites Lobby">
+        </div>
+
         <div class="column">
           <img class="demo cursor" src="images/gardenthumb.jpg" style="width:100%" onclick="currentSlide(3)" alt="The Garden Suite">
         </div>
+
         <div class="column">
           <img class="demo cursor" src="images/oceanthumb.jpg" style="width:100%" onclick="currentSlide(4)" alt="The Ocean View">
         </div>
+
         <div class="column">
           <img class="demo cursor" src="images/weekendthumb.jpg" style="width:100%" onclick="currentSlide(5)" alt="Sunset Hour">
         </div>
+
         <div class="column">
           <img class="demo cursor" src="images/eventthumb.jpg" style="width:100%" onclick="currentSlide(6)" alt="Patio View overlooking the ocean with the fireplace lit">
         </div>
+
+        <div class="column">
+          <img class="demo cursor" src="images/poolthumb.jpg" style="width:100%" onclick="currentSlide(7)" alt="Sunset Infinity Pool Escape">
+        </div>
+
+        <div class="column">
+          <img class="demo cursor" src="images/spathumb.jpg" style="width:100%" onclick="currentSlide(8)" alt="Spa services">
+        </div>
+
+        <div class="column">
+          <img class="demo cursor" src="images/luxuryspathumb.jpg" style="width:100%" onclick="currentSlide(9)" alt="Luxury spa">
+        </div>
+
+        <div class="column">
+          <img class="demo cursor" src="images/couplesthumb.jpg" style="width:100%" onclick="currentSlide(10)" alt="Relax and Unwind Spa Treatment">
+        </div>
+
       </div>
     </div>
 
-    <!-- JavaScript for image slideshow -->
-    <script>
-    let slideIndex = 1;
+  <!-- JavaScript for image slideshow -->
+<script>
+
+/* keeps track of which slide we are on */
+let slideIndex = 1;
+
+/* variable for automatic slideshow */
+let autoSlide;
+
+/* show first slide when page loads */
+showSlides(slideIndex);
+
+/* start slideshow automatically */
+startAutoSlides();
+
+/* next and previous buttons */
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+
+  /* restart timer when user clicks */
+  restartAutoSlides();
+}
+
+/* when user clicks thumbnail */
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+
+  /* restart timer so it feels smooth */
+  restartAutoSlides();
+}
+
+/* main slideshow function */
+function showSlides(n) {
+  let i;
+
+  /* get all slides and thumbnails */
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+
+  /* loop back to first slide */
+  if (n > slides.length) {slideIndex = 1}
+
+  /* go to last slide if below 1 */
+  if (n < 1) {slideIndex = slides.length}
+
+  /* hide all slides */
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  /* remove active from thumbnails */
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  /* show current slide */
+  slides[slideIndex - 1].style.display = "block";
+
+  /* highlight current thumbnail */
+  dots[slideIndex - 1].className += " active";
+
+  /* update caption text */
+  captionText.innerHTML = dots[slideIndex - 1].alt;
+}
+
+/* automatically change slides every 4 seconds */
+function startAutoSlides() {
+  autoSlide = setInterval(function() {
+    slideIndex++;
     showSlides(slideIndex);
+  }, 4000);  /* 4 seconds */
+}
 
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
+/* restart slideshow when user interacts */
+function restartAutoSlides() {
+  clearInterval(autoSlide);
+  startAutoSlides();
+}
 
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
+</script>
 
-    function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("demo");
-      let captionText = document.getElementById("caption");
-      if (n > slides.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " active";
-      captionText.innerHTML = dots[slideIndex-1].alt;
-    }
-    </script>
 
-    <!-- Features list -->
+ <!-- Features list -->
     <h2>Soft Shore Suites features:</h2>
     <ul>
       <li>Large picture windows with a view</li>

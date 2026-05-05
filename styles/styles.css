@@ -453,3 +453,517 @@ form input[type="checkbox"] {
     font-size: 1.3em;
     margin-bottom: 12px;
 }
+/* ===== SLIDESHOW FADE EFFECT ===== */
+
+/* keeps slideshow images hidden until shown by JavaScript */
+.mySlides {
+  display: none;
+
+  /* smooth fade effect when slide changes */
+  animation: fadeEffect 1.5s;
+}
+
+/* fade animation */
+@keyframes fadeEffect {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+/* smoother hover effect on slideshow arrows */
+.prev, .next {
+  transition: 0.4s ease;
+}
+
+/* smoother hover on thumbnail images */
+.demo {
+  transition: 0.4s ease;
+}
+
+/********* RESERVATION PAGE LUXURY STYLES *********/
+
+/* top image banner for reservation page */
+.reservation-hero {
+    position: relative;
+    margin: 20px 0 25px 0;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* reservation hero image */
+.reservation-hero img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    float: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* text overlay on hero image */
+.reservation-hero-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(20, 20, 20, 0.50);
+    color: white;
+    padding: 18px 20px;
+}
+
+/* hero heading */
+.reservation-hero-text h3 {
+    margin: 0 0 8px 0;
+    color: white;
+}
+
+/* hero paragraph */
+.reservation-hero-text p {
+    margin: 0;
+}
+
+/* two-column layout for add-on cards */
+.addons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+/* each add-on card */
+.addon-item {
+    background-color: #ffffff;
+    border: 1px solid #d7d7d7;
+    border-radius: 18px;
+    padding: 18px 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* hover effect to make cards feel more upscale */
+.addon-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.10);
+}
+
+/* checkbox spacing inside add-on cards */
+.addon-item input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+    vertical-align: top;
+    margin-top: 6px;
+}
+
+/* title for each add-on service */
+.addon-item label {
+    display: inline-block;
+    font-size: 1.05em;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* description under each add-on */
+.addon-description {
+    margin: 8px 0 0 32px;
+    color: #5b5b5b;
+    font-size: 0.95em;
+    line-height: 1.4;
+}
+
+/* estimate summary box */
+.estimate-box {
+    background-color: #ffffff;
+    border: 1px solid #d7d7d7;
+    border-radius: 16px;
+    padding: 18px 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+/* spacing for estimate lines */
+.estimate-box p {
+    margin: 10px 0;
+    font-size: 1.05em;
+}
+
+/* mobile layout for reservation page */
+@media (max-width: 768px) {
+    .addons-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reservation-hero img {
+        height: 220px;
+    }
+}
+/********* SHOPPING PAGE STYLES *********/
+
+/* Shopping grid layout */
+.shop-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+/* Product cards */
+.shop-card {
+    background-color: #ffffff;
+    border: 1px solid #d7d7d7;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Product card hover */
+.shop-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.10);
+}
+
+/* Product title */
+.shop-card h4 {
+    margin-top: 0;
+    color: #330000;
+}
+
+/* Product price */
+.shop-price {
+    font-weight: bold;
+    color: #8B6F47;
+    font-size: 1.1em;
+}
+
+/* Shopping buttons */
+.shop-button,
+.remove-button {
+    background-color: #87ceeb;
+    color: #ffffff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Button hover */
+.shop-button:hover,
+.remove-button:hover {
+    background-color: #4682b4;
+}
+
+/* Cart box */
+.cart-box {
+    background-color: #ffffff;
+    border: 1px solid #d7d7d7;
+    border-radius: 18px;
+    padding: 20px;
+    margin-top: 25px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+/* Each cart item line */
+.cart-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid #d9d9d9;
+    padding: 12px 0;
+}
+
+/* Cart total */
+.cart-total {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #330000;
+}
+
+/* Mobile shopping layout */
+@media (max-width: 768px) {
+    .shop-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-line {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+/* Shopping link box on reservation page */
+.shopping-link-box {
+    background-color:#ffffff;
+    border: 1px solid #d7d7d7;
+    border-radius: 14px;
+    padding: 14px;
+    font-weight: bold;
+}
+
+.shopping-link-box a {
+    color: #4682b4;
+}
+
+/********* SHOPPING QUANTITY AND CHECKOUT STYLES *********/
+
+/* Quantity input on each shopping item */
+.quantity-box {
+    width: 70px;
+    padding: 7px;
+    margin: 8px 10px 12px 0;
+    border: 1px solid #cfd8dc;
+    border-radius: 6px;
+}
+
+/* Pop up message when item is added */
+.cart-popup {
+    display: none;
+    background-color: #BFE4E3;
+    color: #330000;
+    border: 1px solid #8B6F47;
+    padding: 12px;
+    border-radius: 14px;
+    margin: 15px 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Checkout button */
+.checkout-button {
+    background-color: #8B6F47;
+    color: #ffffff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Checkout hover effect */
+.checkout-button:hover {
+    background-color: #5f4b2f;
+}
+
+/* Checkout message */
+.checkout-message {
+    font-weight: bold;
+    color: #330000;
+    margin-top: 15px;
+}
+
+/* PRODUCT IMAGE STYLE */
+.shop-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 10px;
+}
+
+/* QUANTITY BOX */
+.quantity-box {
+    width: 60px;
+    padding: 6px;
+    margin: 10px 0;
+}
+
+
+/********* SHOPPING PRODUCT IMAGE STYLES *********/
+
+/* Makes each shopping product picture fit inside the card */
+.shop-img {
+    width: 100%;              /* image takes full width of card */
+    height: 200px;            /* keeps all images same height */
+    object-fit: cover;        /* crops image neatly without stretching */
+    border-radius: 16px;      /* rounded corners to match website */
+    margin-bottom: 15px;      /* space under image */
+    display: block;           /* keeps image in its own line */
+}
+
+/* Keeps shopping cards clean and even */
+.shop-card {
+    overflow: hidden;         /* keeps image inside card */
+}
+
+/* Small hover effect for product pictures */
+.shop-card:hover .shop-img {
+    transform: scale(1.03);   /* image zooms a little */
+}
+
+/* Smooth image hover */
+.shop-img {
+    transition: transform 0.3s ease;
+}
+
+/********* LUXURY SHOPPING PAGE UPGRADE *********/
+
+/* Makes the shopping area look cleaner */
+.shop-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin: 25px 0;
+}
+
+/* Luxury product card */
+.shop-card {
+    background: linear-gradient(180deg, #ffffff, #fffaf1);
+    border: 1px solid #d7c6a5;
+    border-radius: 22px;
+    padding: 22px;
+    box-shadow: 0 8px 20px rgba(51, 0, 0, 0.10);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for product card */
+.shop-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(51, 0, 0, 0.16);
+}
+
+/* Product images */
+.shop-img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 18px;
+    margin-bottom: 16px;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* Small image zoom when hovering */
+.shop-card:hover .shop-img {
+    transform: scale(1.04);
+}
+
+/* Product title */
+.shop-card h4 {
+    color: #330000;
+    font-size: 1.25em;
+    margin-bottom: 10px;
+}
+
+/* Product description */
+.shop-card p {
+    line-height: 1.5;
+}
+
+/* Price style */
+.shop-price {
+    color: #8B6F47;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+/* Quantity box */
+.quantity-box {
+    width: 70px;
+    padding: 8px;
+    margin: 10px 10px 12px 0;
+    border: 1px solid #cfd8dc;
+    border-radius: 8px;
+}
+
+/* Add to cart and remove buttons */
+.shop-button,
+.remove-button {
+    background-color: #87ceeb;
+    color: #ffffff;
+    border: none;
+    padding: 11px 18px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Button hover */
+.shop-button:hover,
+.remove-button:hover {
+    background-color: #4682b4;
+    transform: scale(1.04);
+}
+
+/* Cart box luxury style */
+.cart-box {
+    background: linear-gradient(180deg, #ffffff, #fffaf1);
+    border: 1px solid #d7c6a5;
+    border-radius: 22px;
+    padding: 25px;
+    margin-top: 30px;
+    box-shadow: 0 8px 20px rgba(51, 0, 0, 0.10);
+}
+
+/* Cart item rows */
+.cart-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid #d9d9d9;
+    padding: 14px 0;
+}
+
+/* Cart total */
+.cart-total {
+    font-size: 1.35em;
+    font-weight: bold;
+    color: #330000;
+}
+
+/* Checkout button */
+.checkout-button {
+    background-color: #8B6F47;
+    color: white;
+    border: none;
+    padding: 11px 18px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: 0.3s ease;
+}
+
+/* Checkout hover */
+.checkout-button:hover {
+    background-color: #5f4b2f;
+    transform: scale(1.04);
+}
+
+/* Popup message */
+.cart-popup {
+    display: none;
+    background-color: #BFE4E3;
+    color: #330000;
+    border: 1px solid #8B6F47;
+    padding: 14px;
+    border-radius: 18px;
+    margin: 18px 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Checkout message */
+.checkout-message {
+    font-weight: bold;
+    color: #330000;
+    margin-top: 18px;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .shop-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-line {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
