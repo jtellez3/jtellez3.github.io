@@ -1,0 +1,93 @@
+/************* SLIDESHOW STYLES *************/
+
+/* Container for slideshow */
+.container {
+  position: relative;
+}
+
+/* Hide images by default */
+.mySlides {
+  display: none;
+  animation: fadeEffect 1.5s;
+}
+
+/* Fade animation */
+@keyframes fadeEffect {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+/* Cursor pointer on thumbnails */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Right button */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Hover effect */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Slide number text */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption box */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 10px;
+  color: white;
+}
+
+/* Thumbnail row */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Thumbnail columns */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Thumbnail images */
+.demo {
+  opacity: 0.6;
+  transition: 0.4s ease;
+}
+
+/* Active thumbnail */
+.active,
+.demo:hover {
+  opacity: 1;
+}
