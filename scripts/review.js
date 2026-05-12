@@ -1,5 +1,4 @@
-/*  Project - Jessica Tellez
-   Review page feature using arrays and JavaScript.
+/*  This page feature using arrays and JavaScript.
    This script displays guest reviews for Soft Shore Suites.
 */
 

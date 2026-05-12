@@ -1,4 +1,4 @@
-<!-- Phase 5 Project - Jessica Tellez -->
+<!-- Phase 6 Project - Jessica Tellez -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,13 +6,21 @@
   <title>Contact - Soft Shore Suites</title>
   <meta charset="utf-8">
 
-  <!-- Link to external css file in styles folder -->
+  <!-- Main website CSS -->
   <link href="styles/styles.css" rel="stylesheet">
 
-  <meta name="description" content="contact page for Soft Shore Suites">
-  <meta name="author" content="Jessica Tellez">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+  <!-- Leaflet map CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+
+  <!-- My map CSS -->
+  <link href="styles/mapstyles.css" rel="stylesheet">
+
+  <!-- Leaflet map JavaScript -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js" defer></script>
+
+  <!-- My map and weather JavaScript -->
+  <script src="scripts/mapscript.js" defer></script>
+  </head>
 
 <body>
 <div id="wrapper">
@@ -30,6 +38,7 @@
       <li><a href="rooms/garden.html">Garden View Suite</a></li>
       <li><a href="events/weekend.html">Weekend Events</a></li>
       <li><a href="reservation.html">Reservation</a></li>
+      <li><a href="review.html">Reviews</a></li>
       <li><a href="shopping.html">Shopping</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
@@ -48,14 +57,22 @@
     <h3>Contact Information</h3>
     <div>
       Soft Shore Suites<br>
-      777 Soft Shore Lane<br>
-      Amarillo, TX 79101<br>
+      Near Four Seasons Resort Lanai<br>
+      Lanai, Hawaii<br>
       Phone: 806-555-5555<br>
       Email: <a href="mailto:jatellez@amarillocollege.com">jatellez@amarillocollege.com</a><br><br>
     </div>
 
     <p>We will be happy to help you plan your visit.</p>
     <p>To request a stay, please visit our <a href="reservation.html">Reservation page</a>.</p>
+
+    <!-- Map and weather section -->
+     
+  <h3>Visit Our Resort Location</h3>
+  <p>Soft Shore Suites is located near Four Seasons Resort Lanai in Hawaii.</p>
+
+  <!-- The map will show here -->
+  <div id="map"></div>
 
     <div class="clear"></div>
   </main>
@@ -65,6 +82,7 @@
     Copyright &copy; 2025 Soft Shore Suites<br>
     <a href="mailto:jatellez@amarillocollege.com">Jayka</a>
   </footer>
+
 </div>
 </body>
 </html>

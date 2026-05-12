@@ -1,4 +1,4 @@
-<!-- Phase 5 Project - Jessica Tellez -->
+<!-- Phase 6 Project - Jessica Tellez -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +6,14 @@
 <title>Soft Shore Suites</title>
 <meta charset="utf-8">
 
-<!-- Link to external css file in styles folder -->
+<!-- Main website CSS -->
 <link href="styles/styles.css" rel="stylesheet">
+
+<!-- Slideshow CSS is separate so the gallery design is not in the main CSS -->
+<link href="styles/slideshow.css" rel="stylesheet">
+
+<!-- Slideshow JavaScript is separate so the gallery code is not inside HTML -->
+<script src="scripts/slideshow.js" defer></script>
 
 <meta name="description" content="welcome to Soft Shore Suites and view the slide show of our location">
 <meta name="author" content="Jessica Tellez">
@@ -22,7 +28,7 @@
       <h1>Soft Shore Suites</h1>
   </header>
 
-  <!-- Navigation menu with link to reservation page -->
+  <!-- Navigation menu -->
   <nav>
     <ul> 
       <li><a href="index.html">Home</a></li>
@@ -30,7 +36,8 @@
       <li><a href="rooms/garden.html">Garden View Suite</a></li>
       <li><a href="events/weekend.html">Weekend Events</a></li>
       <li><a href="reservation.html">Reservation</a></li>
-	  <li><a href="review.html">Reviews</a></li>
+      <li><a href="review.html">Reviews</a></li>
+      <li><a href="shopping.html">Shopping</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
@@ -38,6 +45,7 @@
   <!-- Main content section -->
   <main>
     <h2>Relax at Soft Shore Suites</h2>
+
     <p>Soft Shore Suites is a calm and cozy place by the water. 
        Enjoy soft colors, fresh air, and peaceful mornings.</p>
 	 
@@ -84,169 +92,86 @@
         <img src="images/weekend_events.jpg" style="width:100%" alt="Weekend events">
       </div>
 
-      <!-- New slide 7 -->
+      <!-- Slide 7 -->
       <div class="mySlides">
         <div class="numbertext">7 / 10</div>
         <img src="images/infinity_pool.jpg" style="width:100%" alt="Sunset Infinity Pool Escape">
       </div>
 
-      <!-- New slide 8 -->
+      <!-- Slide 8 -->
       <div class="mySlides">
         <div class="numbertext">8 / 10</div>
         <img src="images/spa_services.jpg" style="width:100%" alt="Spa services">
       </div>
 
-      <!-- New slide 9 -->
+      <!-- Slide 9 -->
       <div class="mySlides">
         <div class="numbertext">9 / 10</div>
         <img src="images/luxury_spa_dark.jpg" style="width:100%" alt="Luxury spa">
       </div>
 
-      <!-- New slide 10 -->
+      <!-- Slide 10 -->
       <div class="mySlides">
         <div class="numbertext">10 / 10</div>
         <img src="images/couple_spa_dark.jpg" style="width:100%" alt="Relax and Unwind Spa Treatment">
       </div>
 
-      <!-- Previous and next buttons -->
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <!-- Arrows now use ids instead of inline onclick -->
+      <a class="prev" id="prevBtn">&#10094;</a>
+      <a class="next" id="nextBtn">&#10095;</a>
 
       <!-- Caption text under slideshow -->
       <div class="caption-container">
         <p id="caption"></p>
       </div>
 
-      <!-- Thumbnail images -->
+      <!-- Thumbnail images use data-slide instead of inline onclick -->
       <div class="row">
 
         <div class="column">
-          <img class="demo cursor" src="images/softshorethumb.jpg" style="width:100%" onclick="currentSlide(1)" alt="Welcome to Soft Shore Suites">
+          <img class="demo cursor" src="images/softshorethumb.jpg" style="width:100%" data-slide="1" alt="Welcome to Soft Shore Suites">
         </div>
 
         <div class="column">
-          <img class="demo cursor" src="images/lobbythumb.jpg" style="width:100%" onclick="currentSlide(2)" alt="Soft Shore Suites Lobby">
+          <img class="demo cursor" src="images/lobbythumb.jpg" style="width:100%" data-slide="2" alt="Soft Shore Suites Lobby">
         </div>
 
         <div class="column">
-          <img class="demo cursor" src="images/gardenthumb.jpg" style="width:100%" onclick="currentSlide(3)" alt="The Garden Suite">
+          <img class="demo cursor" src="images/gardenthumb.jpg" style="width:100%" data-slide="3" alt="The Garden Suite">
         </div>
 
         <div class="column">
-          <img class="demo cursor" src="images/oceanthumb.jpg" style="width:100%" onclick="currentSlide(4)" alt="The Ocean View">
+          <img class="demo cursor" src="images/oceanthumb.jpg" style="width:100%" data-slide="4" alt="The Ocean View">
         </div>
 
         <div class="column">
-          <img class="demo cursor" src="images/weekendthumb.jpg" style="width:100%" onclick="currentSlide(5)" alt="Sunset Hour">
+          <img class="demo cursor" src="images/weekendthumb.jpg" style="width:100%" data-slide="5" alt="Sunset Hour">
         </div>
 
         <div class="column">
-          <img class="demo cursor" src="images/eventthumb.jpg" style="width:100%" onclick="currentSlide(6)" alt="Patio View overlooking the ocean with the fireplace lit">
+          <img class="demo cursor" src="images/eventthumb.jpg" style="width:100%" data-slide="6" alt="Patio View overlooking the ocean with the fireplace lit">
         </div>
 
         <div class="column">
-          <img class="demo cursor" src="images/poolthumb.jpg" style="width:100%" onclick="currentSlide(7)" alt="Sunset Infinity Pool Escape">
+          <img class="demo cursor" src="images/poolthumb.jpg" style="width:100%" data-slide="7" alt="Sunset Infinity Pool Escape">
         </div>
 
         <div class="column">
-          <img class="demo cursor" src="images/spathumb.jpg" style="width:100%" onclick="currentSlide(8)" alt="Spa services">
+          <img class="demo cursor" src="images/spathumb.jpg" style="width:100%" data-slide="8" alt="Spa services">
         </div>
 
         <div class="column">
-          <img class="demo cursor" src="images/luxuryspathumb.jpg" style="width:100%" onclick="currentSlide(9)" alt="Luxury spa">
+          <img class="demo cursor" src="images/luxuryspathumb.jpg" style="width:100%" data-slide="9" alt="Luxury spa">
         </div>
 
         <div class="column">
-          <img class="demo cursor" src="images/couplesthumb.jpg" style="width:100%" onclick="currentSlide(10)" alt="Relax and Unwind Spa Treatment">
+          <img class="demo cursor" src="images/couplesthumb.jpg" style="width:100%" data-slide="10" alt="Relax and Unwind Spa Treatment">
         </div>
 
       </div>
     </div>
 
-  <!-- JavaScript for image slideshow -->
-<script>
-
-/* keeps track of which slide we are on */
-let slideIndex = 1;
-
-/* variable for automatic slideshow */
-let autoSlide;
-
-/* show first slide when page loads */
-showSlides(slideIndex);
-
-/* start slideshow automatically */
-startAutoSlides();
-
-/* next and previous buttons */
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-
-  /* restart timer when user clicks */
-  restartAutoSlides();
-}
-
-/* when user clicks thumbnail */
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-
-  /* restart timer so it feels smooth */
-  restartAutoSlides();
-}
-
-/* main slideshow function */
-function showSlides(n) {
-  let i;
-
-  /* get all slides and thumbnails */
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("demo");
-  let captionText = document.getElementById("caption");
-
-  /* loop back to first slide */
-  if (n > slides.length) {slideIndex = 1}
-
-  /* go to last slide if below 1 */
-  if (n < 1) {slideIndex = slides.length}
-
-  /* hide all slides */
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-
-  /* remove active from thumbnails */
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-
-  /* show current slide */
-  slides[slideIndex - 1].style.display = "block";
-
-  /* highlight current thumbnail */
-  dots[slideIndex - 1].className += " active";
-
-  /* update caption text */
-  captionText.innerHTML = dots[slideIndex - 1].alt;
-}
-
-/* automatically change slides every 4 seconds */
-function startAutoSlides() {
-  autoSlide = setInterval(function() {
-    slideIndex++;
-    showSlides(slideIndex);
-  }, 4000);  /* 4 seconds */
-}
-
-/* restart slideshow when user interacts */
-function restartAutoSlides() {
-  clearInterval(autoSlide);
-  startAutoSlides();
-}
-
-</script>
-
-
- <!-- Features list -->
+    <!-- Features list -->
     <h2>Soft Shore Suites features:</h2>
     <ul>
       <li>Large picture windows with a view</li>
@@ -263,7 +188,7 @@ function restartAutoSlides() {
     <!-- Address section -->
     <div>
       777 Soft Shore Lane<br>
-      Amarillo, TX 79101<br>
+      Lanai, Hawaii<br>
       806-555-5555<br><br>
     </div>
   </main>

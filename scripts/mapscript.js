@@ -1,5 +1,5 @@
 /* Map and weather script for Soft Shore Suites
-   This shows the Hawaii resort location and current weather.
+   This shows the Hawaii resort location and the current weather.
 */
 
 // Coordinates for Four Seasons Resort Lanai, Hawaii

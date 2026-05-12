@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
 }
-/************* Position the image (SLIDE SHOW) container (needed to position the left and right arrows) */
+/************* Position the image of my (SLIDE SHOW) container (needed to position the left and right arrows) */
 .container {
   position: relative;
 }
@@ -271,7 +271,7 @@ footer {
     font-size: small;
     font-style: italic;
 }
-/*********Table styles********/
+/******************Table styles***************************/
 table {
     margin: auto;   /* centers table */
     width: 90%;     /* responsive width */
@@ -297,7 +297,7 @@ tr:nth-of-type(odd) {
 }
 
 
-/********* RESPONSIVE STYLES *********/
+/********* RESPONSIVE STYLES **********************/
 
 @media (max-width: 768px) {
     #wrapper {
@@ -966,4 +966,51 @@ form input[type="checkbox"] {
         flex-direction: column;
         align-items: flex-start;
     }
+}
+/********* LUXURY CONFIRMATION MESSAGE *********/
+
+/* This box is hidden until the guest submits the form */
+.confirmation-box {
+    display: none;
+    background: linear-gradient(180deg, #ffffff, #fffaf1);
+    border: 1px solid #d7c6a5;
+    border-radius: 22px;
+    padding: 30px;
+    margin: 25px 0;
+    box-shadow: 0 8px 20px rgba(51, 0, 0, 0.10);
+    text-align: center;
+}
+
+/* Confirmation title */
+.confirmation-box h3 {
+    color: #330000;
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+
+/* Guest details card inside confirmation */
+.confirmation-details {
+    text-align: left;
+    background-color: #ffffff;
+    border: 1px solid #d7d7d7;
+    border-radius: 16px;
+    padding: 18px;
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+/* Back button */
+.confirmation-button {
+    display: inline-block;
+    background-color: #8B6F47;
+    color: #ffffff;
+    padding: 12px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Button hover */
+.confirmation-button:hover {
+    background-color: #5f4b2f;
 }

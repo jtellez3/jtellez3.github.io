@@ -1,6 +1,7 @@
 /* Reservation page estimate calculator
-   This script calculates the room cost, extra service cost,
-   tax, and final total for the reservation page.
+   This script calculates the room cost, extra service cost, tax,
+   and final total. I also added a custom confirmation message
+   so the guest stays on my website after submitting the form.
 */
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -63,4 +64,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
    /* Run calculator once when page loads */
    calcTotal();
+
+   /* This stops the form from going to the plain demo page */
+   document.getElementById("reservationForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      /* Get guest information from the form */
+      let guestName = document.getElementById("fullName").value;
+      let guestEmail = document.getElementById("email").value;
+      let checkinDate = document.getElementById("checkin").value;
+      let checkoutDate = document.getElementById("checkout").value;
+      let totalEstimate = document.getElementById("totalBill").innerHTML;
+
+      /* Put guest information into the confirmation box */
+      document.getElementById("confirmName").innerHTML = guestName;
+      document.getElementById("confirmEmail").innerHTML = guestEmail;
+      document.getElementById("confirmCheckin").innerHTML = checkinDate;
+      document.getElementById("confirmCheckout").innerHTML = checkoutDate;
+      document.getElementById("confirmTotal").innerHTML = totalEstimate;
+
+      /* Hide the form and show the luxury confirmation message */
+      document.getElementById("reservationForm").style.display = "none";
+      document.getElementById("confirmationBox").style.display = "block";
+   });
+
 });

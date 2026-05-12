@@ -1,23 +1,26 @@
-<!-- Phase 5 Project - Jessica Tellez -->
+<!-- Phase 6 Project - Jessica Tellez -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <!-- Reservation page title -->
   <title>Reservation - Soft Shore Suites</title>
   <meta charset="utf-8">
 
-  <!-- Link to external css file in styles folder -->
+  <!-- Main website CSS -->
   <link href="styles/styles.css" rel="stylesheet">
 
   <meta name="description" content="reservation page for booking a stay at Soft Shore Suites">
   <meta name="author" content="Jessica Tellez">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Link to reservation JavaScript file in scripts folder -->
+  <!-- External JavaScript file for reservation calculator and confirmation -->
   <script src="scripts/reservation.js" defer></script>
+
 </head>
 
 <body>
+
 <div id="wrapper">
 
   <!-- Header section -->
@@ -44,28 +47,44 @@
 
     <!-- Reservation heading -->
     <h3>Plan Your Stay</h3>
-    <!-- Short intro for the guest -->
-    <p>Complete the form below to request your stay and create an estimate for your suite and luxury add-on services.</p>
 
-    <!-- Link to shopping page so guests can add items to their cart -->
-    <p class="shopping-link-box">
-      Want to add souvenirs or guest gifts?
-    <a href="shopping.html">Start Shopping Here</a>
+    <!-- Intro paragraph -->
+    <p>
+      Complete the form below to request your stay and create an estimate
+      for your suite and luxury add-on services.
     </p>
 
-    <!-- Reservation page image banner -->
+    <!-- Shopping page link -->
+
+    
+    <p class="shopping-link-box">
+      Want to add souvenirs or guest gifts?
+      <a href="shopping.html">Start Shopping Here</a>
+    </p>
+
+    <!-- Reservation hero image -->
     <div class="reservation-hero">
-      <img src="images/luxury_spa_dark.jpg" alt="Luxury spa experience at Soft Shore Suites">
+
+      <img src="images/luxury_spa_dark.jpg"
+           alt="Luxury spa experience at Soft Shore Suites">
+
       <div class="reservation-hero-text">
         <h3>Luxury Stay Experience</h3>
-        <p>Customize your reservation with premium services for a relaxing and upscale getaway.</p>
+
+        <p>
+          Customize your reservation with premium services
+          for a relaxing and upscale getaway.
+        </p>
       </div>
+
     </div>
 
     <!-- Reservation form -->
-    <form method="post" action="https://webdevbasics.net/scripts/demo.php">
 
-      <!-- Guest information -->
+
+    <form id="reservationForm">
+
+      <!-- Guest Information -->
       <h3>Guest Information</h3>
 
       <div class="form-group">
@@ -93,89 +112,236 @@
         <input type="number" id="guests" name="guests" min="1" max="6">
       </div>
 
+      <!-- Room selection -->
       <div class="form-group">
+
         <label for="roomType">Select Your Suite</label>
+
         <select id="roomType" name="roomType">
           <option value="0">Choose a suite</option>
           <option value="220">Ocean View Suite - $220.00</option>
           <option value="180">Garden View Suite - $180.00</option>
         </select>
+
       </div>
 
-      <!-- Extra guest services section -->
+      <!-- Add-on services -->
       <h3>Luxury Add-On Services</h3>
+
       <p>Select any add-ons you would like to include with your stay.</p>
 
       <div class="addons-grid">
 
+        <!-- Room service -->
         <div class="form-group addon-item">
+
           <input type="checkbox" id="roomService" name="roomService">
-          <label for="roomService">Room Service ($25.00)</label>
-          <p class="addon-description">Enjoy convenient in-room dining during your stay.</p>
+
+          <label for="roomService">
+            Room Service ($25.00)
+          </label>
+
+          <p class="addon-description">
+            Enjoy convenient in-room dining during your stay.
+          </p>
+
         </div>
 
+        <!-- Champagne -->
         <div class="form-group addon-item">
+
           <input type="checkbox" id="champagne" name="champagne">
-          <label for="champagne">Champagne ($45.00)</label>
-          <p class="addon-description">Add a chilled bottle of champagne for a special occasion.</p>
+
+          <label for="champagne">
+            Champagne ($45.00)
+          </label>
+
+          <p class="addon-description">
+            Add a chilled bottle of champagne for a special occasion.
+          </p>
+
         </div>
 
+        <!-- Valet -->
         <div class="form-group addon-item">
+
           <input type="checkbox" id="valetParking" name="valetParking">
-          <label for="valetParking">Valet Parking ($20.00)</label>
-          <p class="addon-description">Enjoy easy arrival and parking service during your stay.</p>
+
+          <label for="valetParking">
+            Valet Parking ($20.00)
+          </label>
+
+          <p class="addon-description">
+            Enjoy easy arrival and parking service during your stay.
+          </p>
+
         </div>
 
+        <!-- Spa -->
         <div class="form-group addon-item">
+
           <input type="checkbox" id="spaService" name="spaService">
-          <label for="spaService">Spa Treatment ($80.00)</label>
-          <p class="addon-description">Relax with a luxury spa treatment designed to refresh your stay.</p>
+
+          <label for="spaService">
+            Spa Treatment ($80.00)
+          </label>
+
+          <p class="addon-description">
+            Relax with a luxury spa treatment designed to refresh your stay.
+          </p>
+
         </div>
 
+        <!-- Massage -->
         <div class="form-group addon-item">
+
           <input type="checkbox" id="massageService" name="massageService">
-          <label for="massageService">Massage Service ($95.00)</label>
-          <p class="addon-description">Unwind with a calming massage session during your reservation.</p>
+
+          <label for="massageService">
+            Massage Service ($95.00)
+          </label>
+
+          <p class="addon-description">
+            Unwind with a calming massage session during your reservation.
+          </p>
+
         </div>
 
+        <!-- Spa package -->
         <div class="form-group addon-item">
+
           <input type="checkbox" id="spaPackage" name="spaPackage">
-          <label for="spaPackage">Luxury Spa Package ($120.00)</label>
-          <p class="addon-description">Includes a premium wellness upgrade for a more relaxing and elegant stay.</p>
+
+          <label for="spaPackage">
+            Luxury Spa Package ($120.00)
+          </label>
+
+          <p class="addon-description">
+            Includes a premium wellness upgrade for a more relaxing and elegant stay.
+          </p>
+
         </div>
 
       </div>
 
-      <!-- Estimate summary updated by JavaScript -->
+      <!-- Estimate summary -->
       <h3>Estimate Summary</h3>
 
+      <!-- JavaScript updates these totals automatically -->
       <div class="estimate-box">
-        <p>Room Cost: <span id="roomCost">$0.00</span></p>
-        <p>Extra Services: <span id="serviceTotal">$0.00</span></p>
-        <p>Tax: <span id="serviceTax">$0.00</span></p>
-        <p>Total: <span id="totalBill">$0.00</span></p>
+
+        <p>
+          Room Cost:
+          <span id="roomCost">$0.00</span>
+        </p>
+
+        <p>
+          Extra Services:
+          <span id="serviceTotal">$0.00</span>
+        </p>
+
+        <p>
+          Tax:
+          <span id="serviceTax">$0.00</span>
+        </p>
+
+        <p>
+          Total:
+          <span id="totalBill">$0.00</span>
+        </p>
+
       </div>
 
-      <!-- Notes area -->
+      <!-- Special request area -->
       <div class="form-group">
+
         <label for="notes">Special Requests</label>
-        <textarea id="notes" name="notes" rows="4"></textarea>
+
+        <textarea id="notes"
+                  name="notes"
+                  rows="4"></textarea>
+
       </div>
 
       <!-- Submit button -->
-      <input type="submit" value="Submit Reservation Request">
+      <input type="submit"
+             value="Submit Reservation Request">
 
     </form>
 
+    <!-- confirmation section after reservation form submission
+         This section is hidden when the page loads and only appears after the guest submits the form.
+         
+    -->
+    <section id="confirmationBox" class="confirmation-box">
+
+      <h3>Your Reservation Request Has Been Received</h3>
+
+      <p>
+        Thank you for requesting your stay at Soft Shore Suites.
+      </p>
+
+      <p>
+        We received your information and will contact you soon
+        to confirm your luxury stay.
+      </p>
+
+      <!-- Guest details inserted by JavaScript -->
+      <div class="confirmation-details">
+
+        <p>
+          <strong>Guest Name:</strong>
+          <span id="confirmName"></span>
+        </p>
+
+        <p>
+          <strong>Email:</strong>
+          <span id="confirmEmail"></span>
+        </p>
+
+        <p>
+          <strong>Check-in Date:</strong>
+          <span id="confirmCheckin"></span>
+        </p>
+
+        <p>
+          <strong>Check-out Date:</strong>
+          <span id="confirmCheckout"></span>
+        </p>
+
+        <p>
+          <strong>Total Estimate:</strong>
+          <span id="confirmTotal"></span>
+        </p>
+
+      </div>
+
+      <!-- Button returns guest back to reservation page -->
+      <a href="reservation.html"
+         class="confirmation-button">
+
+         Back to Reservation Page
+
+      </a>
+
+    </section>
+
     <div class="clear"></div>
+
   </main>
 
   <!-- Footer -->
   <footer>
+
     Copyright &copy; 2025 Soft Shore Suites<br>
-    <a href="mailto:jatellez@amarillocollege.com">Jayka</a>
+
+    <a href="mailto:jatellez@amarillocollege.com">
+      Jayka
+    </a>
+
   </footer>
 
 </div>
+
 </body>
 </html>
